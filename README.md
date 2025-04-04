@@ -1,24 +1,27 @@
-# README
+## サイト概要
+### サイトテーマ
+ 作りたい料理のレシピを検索したり、自分の料理を投稿できるコミュニティサイト
+​
+### テーマを選んだ理由
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+一人暮らしをしていて、昼食を外食にすることが多く、物品の値上がりなどで少しでも節約したいと思い、料理をするようになりましたが、レシピのレパートリーが少なく頭を悩ませていました。そんな時に他の人がどのようなレシピで作っているのかを知れるサービスがあれば便利だと考えました。
+また料理好きな人だけでなく、日々料理を作る必要があるがレシピに困っている人の助けにもなると考え、このテーマにしました。
 
-Things you may want to cover:
+​
+### ターゲットユーザ
+レパートリーが少ない人、作り置き料理が知りたい人、手軽な食材や調味料で解決したい人、本格的な料理を知りたい人
 
-* Ruby version
+​
+### 主な利用シーン
+​毎日の朝ごはんと夜ご飯を作る時、お弁当作りをする時、作り置きをしたい時
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 設計書
+「後ほど作成予定」
+​
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
+​
