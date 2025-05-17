@@ -1,0 +1,30 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-3'>
+      <h2>User info</h2>
+      <%= render 'users/info', user: @user %>
+      <h2 class="mt-3">New cooking</h2>
+      <%= render 'form', cooking: @cooking_new %>
+    </div>
+    <div class='col-md-8 offset-md-1'>
+      <h2>Cooking detail</h2>
+      <table class='table'>
+        <tr>
+          <td><%= link_to user_path(@cooking.user) do %>
+            <%= image_tag @cooking.user.get_profile_image(100,100) %><br>
+            <%= @cooking.user.name %>
+            <% end %>
+          </td>
+          <td><%= link_to @cooking.title, cooking_path(@cooking) %></td>
+          <td><%= @cooking.body %></td>
+          <% if @cooking.user == current_user %>
+            <td><%= link_to 'Edit', edit_cooking_path(@cooking), class: "btn btn-sm btn-success" %></td>
+            <td><%= link_to 'Destroy', cooking_path(@cooking), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-danger"%></td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+

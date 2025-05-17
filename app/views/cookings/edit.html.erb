@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+  		<h1>Editing Cooking</h1>
+      <% if @cooking.errors.any? %>
+        <%= @cooking.errors.count %>件errorが発生しました
+        <ul>
+          <% @cooking.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+  		<%= form_with model: @cooking do |f| %>
+    		<div class="form-group">
+        <%= f.label :title %></br>
+        <%= f.text_field :title %>
+        </div>
+  <div class="form-group">
+     <%= f.label :opinion %></br>
+     <%= f.text_area :body %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Update Cooking',class: 'btn btn-success' %>
+  </div>
+<% end %>
+  		<<%= link_to 'Show', cooking_path(@cooking) %>
+  		<<%= link_to 'Back', cookings_path %>
+  </div>
+</div>
+</div>
+

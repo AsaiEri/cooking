@@ -60,3 +60,5 @@ gem 'concurrent-ruby', '1.3.4'
 gem 'spring', '4.2.1'
 
 gem 'devise'
+
+gem 'kaminari','~> 1.2.1'

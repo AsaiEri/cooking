@@ -1,0 +1,22 @@
+<table class='table table-hover table-inverse'>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Opinion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% cookings.each do |cooking| %>
+      <tr>
+        <td><%= link_to user_path(cooking.user) do %>
+          <%= image_tag cooking.user.get_profile_image(50,50)%>
+          <% end %>
+        </td>
+        <td><%= link_to cooking.title, cooking_path(cooking) %></td>
+        <td><%= cooking.body %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

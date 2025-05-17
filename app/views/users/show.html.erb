@@ -1,0 +1,33 @@
+<div>
+   <%= flash[:notice] =%>
+</div>
+
+<!-- ユーザーの詳細 -->
+
+<div class="card-list-container py-5">
+  <div class="card w-50 mx-auto mt-4 shadow-lg">
+    <%= link_to user_path(@user.id) do %>
+      <%= image_tag @user.get_profile_image(100,100), class: "card-img-top"; %>
+    <% end %>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-2">
+        </div>
+        <div class="col-6">
+          <p class="card-title">
+            <%= link_to(user_path(@user.id), class: "text-dark") do %>
+              <strong><i class="fas fa-user"></i> 名前:<span> <%= @user.name %></span></strong>
+            <% end %>
+          </p>
+          <span>Eメ-ルアドレス:<%= @user.email %></span>
+        </div>
+        <div class="col-4">
+          <% if @user == User.find(params[:id]) %>
+            <%= link_to "プロフィール編集", edit_user_path(@user) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
