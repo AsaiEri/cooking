@@ -20,5 +20,6 @@ module Cooking
     # config.eager_load_paths << Rails.root.join("extras")
     config.hosts << "b0b6d0d15c114d82ac3c463919ecf3f1.vfs.cloud9.ap-northeast-1.amazonaws.com"
     config.hosts << "18.180.203.162"
+    config.hosts << "52.195.194.4"
   end
 end
